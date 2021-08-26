@@ -2,9 +2,11 @@
     --side-bar-bg-color: #fafafa;
     --control-text-color: #777;
     --text-color: black;
+    --a-color: cornflowerblue;
     --line-color: gray;
     --blockquote-color: limegreen;
     --blockquote-text-color: darkgray;
+    --blockquote-a-color: orangered;
     --code-bg-color: seashell;
     --codeblock-border-color: brown;
     --table-border-color: lightgray;
@@ -87,7 +89,7 @@ body {
 }
 
 a {
-    color: #4183C4;
+    color: var(--a-color);
 }
 
 h1,
@@ -283,8 +285,7 @@ blockquote p:last-child {
 }
 
 blockquote a {
-    color: #8e8787;
-    border-bottom: 1px solid #8e8787
+    color: var(--blockquote-a-color);
 }
 
 blockquote blockquote {
