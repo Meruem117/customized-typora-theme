@@ -5,11 +5,14 @@
     --write-bg-color: oldlace;
     --text-color: black;
     --a-color: cornflowerblue;
-    --line-color: gray;
+    --line-color: dimgray;
+    --meta-color: red;
     --blockquote-color: limegreen;
     --blockquote-text-color: darkgray;
     --blockquote-a-color: orangered;
+    --blockquote-bg-color: transparent;
     --code-bg-color: seashell;
+    --code-border-color: brown;
     --codeblock-border-color: brown;
     --table-border-color: lightgray;
     --table-title-bg-color: antiquewhite;
@@ -240,16 +243,16 @@ tt {
 }
 
 code {
-    border: none;
     padding: 5px;
+    border: 1px dashed var(--code-border-color);
 }
 
 .md-fences {
-    border: 1px dashed var(--codeblock-border-color);
     margin-bottom: 15px;
     margin-top: 15px;
     padding-top: 8px;
     padding-bottom: 6px;
+    border: 1px dashed var(--codeblock-border-color);
 }
 
 .md-task-list-item>input {
@@ -260,14 +263,15 @@ blockquote {
     position: relative;
     display: block;
     margin: 37px auto;
-    border-left: 3px solid var(--blockquote-color);
-    font-style: normal;
+    padding: 0 12px;
     text-align: left;
-    color: var(--blockquote-text-color);
-    font-weight: 500;
-    font-size: 17px;
     line-height: 160%;
-    padding: 0 12px
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--blockquote-text-color);
+    border-left: 3px solid var(--blockquote-color);
+    background-color: var(--blockquote-bg-color);
 }
 
 blockquote:before {
@@ -385,6 +389,16 @@ img {
     }
 }
 
+.md-blockmeta {
+    color: var(--meta-color);
+    font-weight: 700;
+    font-style: italic;
+}
+
+.md-meta {
+    color: var(--meta-color);
+}
+
 #write pre.md-meta-block {
     padding: 1rem;
     font-size: 85%;
@@ -405,23 +419,23 @@ img {
 }
 
 #write>h3.md-focus:before {
-    left: -1.5625rem;
-    top: .375rem;
+    left: -1.5rem;
+    top: .35rem;
 }
 
 #write>h4.md-focus:before {
-    left: -1.5625rem;
-    top: .285714286rem;
+    left: -1.5rem;
+    top: .3rem;
 }
 
 #write>h5.md-focus:before {
-    left: -1.5625rem;
-    top: .285714286rem;
+    left: -1.5rem;
+    top: .3rem;
 }
 
 #write>h6.md-focus:before {
-    left: -1.5625rem;
-    top: .285714286rem;
+    left: -1.5rem;
+    top: .3rem;
 }
 
 .md-image>.md-meta {
