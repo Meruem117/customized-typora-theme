@@ -1,6 +1,8 @@
 :root {
     --side-bar-bg-color: #fafafa;
     --control-text-color: #777;
+    --bg-img: url(./mystyle/bg.jpg);
+    --write-bg-color: oldlace;
     --text-color: black;
     --a-color: cornflowerblue;
     --line-color: gray;
@@ -56,7 +58,10 @@
 
 html {
     font-size: 18px;
-    background: url(./mystyle/bg.jpg);
+    background: var(--bg-img);
+    background-repeat: repeat;
+    /* background-position: center;
+    background-size: cover; */
     -webkit-font-smoothing: antialiased;
 }
 
@@ -68,9 +73,10 @@ body {
 
 #write {
     max-width: 860px;
-    margin: 0 auto;
-    padding: 30px;
+    margin: 45px auto;
+    padding: 10px 30px;
     padding-bottom: 100px;
+    background-color: var(--write-bg-color);
 }
 
 @media only screen and (min-width: 1400px) {
