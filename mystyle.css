@@ -5,14 +5,18 @@
     --write-bg-color: oldlace;
     --text-color: black;
     --a-color: cornflowerblue;
+    --h1-underline-style: double;
+    --h1-underline-color: dimgray;
+    --line-style: dashed;
     --line-color: dimgray;
     --meta-color: red;
+    --blockquote-bg-color: transparent;
     --blockquote-color: limegreen;
     --blockquote-text-color: darkgray;
     --blockquote-a-color: orangered;
-    --blockquote-bg-color: transparent;
     --code-bg-color: seashell;
     --code-border-color: brown;
+    --codeblock-bg-color: seashell;
     --codeblock-border-color: brown;
     --table-border-color: lightgray;
     --table-title-bg-color: antiquewhite;
@@ -159,7 +163,8 @@ h6 code {
 h1 {
     font-size: 2.25em;
     line-height: 2;
-    border-bottom: 4px double var(--line-color);
+    border-bottom: 4px var(--h1-underline-style);
+    border-color: var(--h1-underline-color);
 }
 
 h2 {
@@ -201,7 +206,7 @@ hr {
     padding: 0;
     margin: 16px 0;
     background-color: transparent;
-    border-bottom: 2px dashed var(--line-color);
+    border-bottom: 2px var(--line-style) var(--line-color);
     overflow: hidden;
     box-sizing: content-box;
 }
@@ -237,7 +242,6 @@ ol:last-child {
 .md-fences,
 code,
 tt {
-    background-color: var(--code-bg-color);
     border-radius: 5px;
     font-size: 0.9em;
 }
@@ -245,6 +249,7 @@ tt {
 code {
     padding: 5px;
     border: 1px dashed var(--code-border-color);
+    background-color: var(--code-bg-color);
 }
 
 .md-fences {
@@ -253,6 +258,7 @@ code {
     padding-top: 8px;
     padding-bottom: 6px;
     border: 1px dashed var(--codeblock-border-color);
+    background-color: var(--codeblock-bg-color);
 }
 
 .md-task-list-item>input {

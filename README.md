@@ -1,5 +1,11 @@
-# My Typora Theme
-My own typora theme
+# Customized Theme
 
-background image - from Internet
-font style - from newsprint
+> Typora 客制化主题
+
+Q: 客制化主题解决的主要矛盾是什么?
+
+A: 虽然现在Typora的主题很多，但总不能满足所有程序员的需求，每个人都有自己喜欢的样式和风格，而修改现有的主题又需要花费时间去了解markdown和html的对应关系，以及markdown的样式与css选择器的对应关系，客制化主题正是为了减少这段时间而存在的。
+
+Q: 客制化主题如何实现客制化?
+
+A: 使用css变量，将常用的一些属性抽象出来，供用户统一修改，简单，可行，又方便。
