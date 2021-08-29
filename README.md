@@ -136,3 +136,6 @@ git clone https://github.com/Meruem117/customized_typora_theme
 > 快速打开主题文件夹
 >
 > 打开Typora --> 文件 --> 偏好设置 --> 外观 --> 打开主题文件夹
+
+TODO:  添加更多可配置项
+
