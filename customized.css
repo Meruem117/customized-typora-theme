@@ -1,30 +1,38 @@
 :root {
-    --side-bar-bg-color: #fafafa;
-    --control-text-color: #777;
-    --bg-img: url(./mystyle/bg.jpg);
+    --bg-img: url(./customized/bg.jpg);
     --write-bg-color: oldlace;
+    --text-size: 18px;
     --text-color: black;
     --a-color: cornflowerblue;
     --h1-underline-style: double;
     --h1-underline-color: dimgray;
+    --line-size: 2px;
     --line-style: dashed;
     --line-color: dimgray;
     --meta-color: red;
+    --blockquote-bar-size: 3px;
+    --blockquote-bar-color: limegreen;
     --blockquote-bg-color: transparent;
-    --blockquote-color: limegreen;
     --blockquote-text-color: darkgray;
     --blockquote-a-color: orangered;
     --code-bg-color: seashell;
+    --code-border-style: dashed;
     --code-border-color: brown;
     --codeblock-bg-color: seashell;
+    --codeblock-border-style: dashed;
     --codeblock-border-color: brown;
+    --table-border-size: 1px;
+    --table-border-style: solid;
     --table-border-color: lightgray;
     --table-title-bg-color: antiquewhite;
     --table-odd-bg-color: ghostwhite;
     --table-even-bg-color: whitesmoke;
     --table-hover-bg-color: bisque;
-    --img-shadow-color: darkslategray;
+    --img-border-size: 1px;
+    --img-border-radius: 8px;
+    --img-border-style: solid;
     --img-border-color: burlywood;
+    --img-shadow-color: darkslategray;
 }
 
 /* pt-serif-regular - latin */
@@ -64,7 +72,7 @@
 }
 
 html {
-    font-size: 18px;
+    font-size: var(--text-size);
     background: var(--bg-img);
     background-repeat: repeat;
     /* background-position: center;
@@ -82,7 +90,7 @@ body {
     max-width: 860px;
     margin: 45px auto;
     padding: 10px 30px;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     background-color: var(--write-bg-color);
 }
 
@@ -206,7 +214,10 @@ hr {
     padding: 0;
     margin: 16px 0;
     background-color: transparent;
-    border-bottom: 2px var(--line-style) var(--line-color);
+    border: 0;
+    border-bottom: var(--line-size);
+    border-style: var(--line-style);
+    border-color: var(--line-color);
     overflow: hidden;
     box-sizing: content-box;
 }
@@ -248,7 +259,9 @@ tt {
 
 code {
     padding: 5px;
-    border: 1px dashed var(--code-border-color);
+    border: 1px;
+    border-style: var(--code-border-style);
+    border-color: var(--code-border-color);
     background-color: var(--code-bg-color);
 }
 
@@ -257,7 +270,9 @@ code {
     margin-top: 15px;
     padding-top: 8px;
     padding-bottom: 6px;
-    border: 1px dashed var(--codeblock-border-color);
+    border: 1px;
+    border-style: var(--codeblock-border-style);
+    border-color: var(--codeblock-border-color);
     background-color: var(--codeblock-bg-color);
 }
 
@@ -276,7 +291,10 @@ blockquote {
     font-weight: 500;
     font-style: normal;
     color: var(--blockquote-text-color);
-    border-left: 3px solid var(--blockquote-color);
+    border: 0;
+    border-left: var(--blockquote-bar-size);
+    border-style: solid;
+    border-color: var(--blockquote-bar-color);
     background-color: var(--blockquote-bg-color);
 }
 
@@ -312,7 +330,9 @@ blockquote blockquote {
 
 table {
     padding: 0;
-    border: 1px solid var(--table-border-color);
+    border: var(--table-border-size);
+    border-style: var(--table-border-style);
+    border-color: var(--table-border-color);
     border-collapse: collapse;
     word-break: initial;
 }
@@ -375,8 +395,10 @@ table tr:hover>td {
 }
 
 img {
-    border-radius: 8px;
-    border: 8px solid var(--img-border-color);
+    border-radius: var(--img-border-radius);
+    border: var(--img-border-size);
+    border-style: var(--img-border-style);
+    border-color: var(--img-border-color);
     box-shadow: 0px 15px 35px 1px var(--img-shadow-color);
 }
 
@@ -476,57 +498,4 @@ img {
     border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
     border-style: solid;
     border-width: 1px;
-}
-
-/** focus mode */
-.on-focus-mode blockquote {
-    border-left-color: rgba(85, 85, 85, 0.12);
-}
-
-header,
-.context-menu,
-.megamenu-content,
-footer {
-    font-family: "Segoe UI", "Arial", sans-serif;
-}
-
-.file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state {
-    visibility: visible;
-}
-
-.mac-seamless-mode #typora-sidebar {
-    background-color: #fafafa;
-    background-color: var(--side-bar-bg-color);
-}
-
-.md-lang {
-    color: #b4654d;
-}
-
-/*.html-for-mac {
-    --item-hover-bg-color: #E6F0FE;
-}*/
-
-#md-notification .btn {
-    border: 0;
-}
-
-.dropdown-menu .divider {
-    border-color: #e5e5e5;
-    opacity: 0.4;
-}
-
-.ty-preferences .window-content {
-    background-color: #fafafa;
-}
-
-.ty-preferences .nav-group-item.active {
-    color: white;
-    background: #999;
-}
-
-.menu-item-container a.menu-style-btn {
-    background-color: #f5f8fa;
-    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0));
 }
