@@ -1,5 +1,6 @@
 :root {
     --bg-img: url(./customized/bg.jpg);
+    --bg-color: floralwhite;
     --write-bg-color: oldlace;
     --text-size: 18px;
     --text-color: black;
@@ -75,6 +76,7 @@ html {
     font-size: var(--text-size);
     background: var(--bg-img);
     background-repeat: repeat;
+    /* background-color: var(--bg-color); */
     /* background-position: center;
     background-size: cover; */
     -webkit-font-smoothing: antialiased;

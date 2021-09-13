@@ -29,9 +29,10 @@ A: 使用css变量，将常用的一些属性抽象出来，供用户统一修�
 | name               |        css         |        description |                 default |
 | ------------------ | :----------------: | -----------------: | ----------------------: |
 | `--bg-img`         |    `background`    |       html背景图片 | `url(./mystyle/bg.jpg)` |
+| `--bg-color`       | `background-color` |       html背景颜色 |           `floralwhite` |
 | `--write-bg-color` | `background-color` | 可书写部分背景颜色 |               `oldlace` |
 
-> 侧边栏来自Typora自带主题中的 `Github` 主题
+> 如果需要背景图片则指定背景图片，在html选择器中注释掉背景颜色；不需要背景图片则执行相反操作
 
 
 
